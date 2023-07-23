@@ -6,15 +6,20 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-
         Integer[] array1 = randomIntList();
 
         Character[] array2 = randomCharList();
 
         Methodology methodology = selectMethodology(args, array1);
 
-        ArrayOrganizer organizer = new ArrayOrganizer(methodology, 1000);
+        ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args));
         organizer.sort();
+    }
+
+    public static int getDelay(String[] args) {
+        String delay = getParamValue(args, "s");
+
+        return Integer.parseInt(delay);
     }
 
     public static Integer[] randomIntList() {
@@ -45,7 +50,7 @@ public class Main {
 
 
     public static Methodology selectMethodology(String[] args, Integer[] array) {
-        String type = getParamValue(args, "o").toLowerCase();
+        String type = getParamValue(args, "a").toLowerCase();
 
         switch (type) {
             case "b":
@@ -56,11 +61,11 @@ public class Main {
     }
 
     public static Methodology selectMethodology(String[] args, Character[] array) {
-        String type = getParamValue(args, "o").toLowerCase();
+        String type = getParamValue(args, "a").toLowerCase();
 
         switch (type) {
             case "b":
-                BobbleSort bobbleSort = new BobbleSort<>(array, isBiggerToSmaller(args));
+                return new BobbleSort<>(array, isBiggerToSmaller(args));
         }
 
         return new BobbleSort<>(array, isBiggerToSmaller(args));
