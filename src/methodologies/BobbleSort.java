@@ -1,12 +1,21 @@
 package methodologies;
 
+import java.util.Arrays;
+
 public class BobbleSort <T extends Comparable<T>> implements Methodology {
     private T[] array;
     private int step = 0;
     private int index = 0;
+    private boolean invertOrder;
 
     public BobbleSort(T[] array) {
         this.array = array;
+        this.invertOrder = false;
+    }
+
+    public BobbleSort(T[] array, boolean invertOrder) {
+        this.array = array;
+        this.invertOrder = invertOrder;
     }
 
     @Override
@@ -16,7 +25,9 @@ public class BobbleSort <T extends Comparable<T>> implements Methodology {
         T firstElement = array[index];
         T secondElement = array[index + 1];
 
-        boolean validation = firstElement.compareTo(secondElement) > 0;
+        boolean validation = !invertOrder ?
+                firstElement.compareTo(secondElement) > 0 :
+                secondElement.compareTo(firstElement) > 0;
 
         if (validation) {
             array[index] = secondElement;
@@ -49,7 +60,14 @@ public class BobbleSort <T extends Comparable<T>> implements Methodology {
 
     public boolean isOrganized() {
         for (int i = 0; i < array.length - 1; i++) {
-            if (array[i].compareTo(array[i + 1] ) > 0) return false;
+            T firstElement = array[i];
+            T secondElement = array[i + 1];
+
+            boolean validation = !invertOrder ?
+                    firstElement.compareTo(secondElement) > 0 :
+                    secondElement.compareTo(firstElement) > 0;
+
+            if (validation) return false;
         }
 
         return true;
