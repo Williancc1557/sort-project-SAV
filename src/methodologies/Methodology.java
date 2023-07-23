@@ -6,4 +6,5 @@ public interface Methodology<T> {
     public T[] getArray();
     public int getStep();
     public int getIndex();
+    public boolean isOrganized();
 }

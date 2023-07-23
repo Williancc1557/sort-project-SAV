@@ -1,7 +1,5 @@
 import methodologies.Methodology;
 
-import java.util.Arrays;
-
 public class ArrayOrganizer extends Interface {
     private int delay;
     public Methodology methodology;
@@ -12,7 +10,7 @@ public class ArrayOrganizer extends Interface {
     }
 
     public void sort() throws InterruptedException {
-        while (true) {
+        while (!methodology.isOrganized()) {
             methodology.handle();
             Thread.sleep(delay);
             showStep(methodology.getArray(), methodology.getStep());
