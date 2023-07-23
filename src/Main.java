@@ -1,4 +1,5 @@
 import methodologies.BobbleSort;
+import methodologies.InsertionSort;
 import methodologies.Methodology;
 
 import java.util.Arrays;
@@ -6,7 +7,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Integer[] array1 = randomIntList();
+        Integer[] array1 = {25, 27, 19, 8, 16, 20, 22};
 
         Character[] array2 = randomCharList();
 
@@ -22,8 +23,9 @@ public class Main {
         return Integer.parseInt(delay);
     }
 
-    public static Integer[] randomIntList() {
-        Integer[] randomIntList = new Integer[7];
+    public static Integer[] randomIntList(String[] args) {
+        int LENGTH =  Integer.parseInt(getParamValue(args, "r"));
+        Integer[] randomIntList = new Integer[LENGTH];
 
         Random random = new Random();
         for (int i = 0; i < randomIntList.length; i++) {
@@ -48,13 +50,14 @@ public class Main {
         return randomList;
     }
 
-
     public static Methodology selectMethodology(String[] args, Integer[] array) {
         String type = getParamValue(args, "a").toLowerCase();
 
         switch (type) {
             case "b":
                 return new BobbleSort<>(array, isBiggerToSmaller(args));
+            case "i":
+                return new InsertionSort<>(array, isBiggerToSmaller(args));
         }
 
         return new BobbleSort<>(array, isBiggerToSmaller(args));
@@ -66,6 +69,8 @@ public class Main {
         switch (type) {
             case "b":
                 return new BobbleSort<>(array, isBiggerToSmaller(args));
+            case "i":
+                return new InsertionSort<>(array, isBiggerToSmaller(args));
         }
 
         return new BobbleSort<>(array, isBiggerToSmaller(args));
