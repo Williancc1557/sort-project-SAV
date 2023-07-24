@@ -7,21 +7,68 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Integer[] array1 = randomIntList(args);
+        String listType = getParamValue(args, "t").toLowerCase();
 
-        Character[] array2 = randomCharList(args);
+        switch (listType) {
+            case "n":
+                Integer[] arrayInt = getIntList(args);
+                Methodology methodologyInt = selectMethodology(args, arrayInt);
+                handleMethodology(methodologyInt, args);
+                break;
+            case "c":
+                Character[] arrayChar = getCharList(args);
+                Methodology methodologyChar = selectMethodology(args, arrayChar);
+                handleMethodology(methodologyChar, args);
+                break;
+            default:
+                throw new RuntimeException("Invalid parameter 't'");
+        }
 
-        Methodology methodology = selectMethodology(args, array2);
+    }
 
+    public static void handleMethodology(Methodology methodology, String args[]) throws InterruptedException {
         ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args));
         organizer.sort();
     }
 
-    public static Integer[] getInList(String[] args) {
-        String delay = getParamValue(args, "s");
+    public static Integer[] getIntList(String[] args) {
+        String inputType = getParamValue(args, "in").toLowerCase();
 
-        return new Integer[]{1};
+        switch (inputType) {
+            case "r":
+                return randomIntList(args);
+            case "m":
+                return convertInputToIntList(args);
+            default:
+                throw new RuntimeException("Invalid param '1'");
+        }
     }
+
+    public static Integer[] convertInputToIntList(String[] args) {
+        String[] inputType = getParamValue(args, "v").split(",");
+
+        Integer[] list = new Integer[inputType.length];
+        for (int i = 0; i < list.length; i++) {
+            list[i] = Integer.parseInt(inputType[i]);
+        }
+
+        return list;
+    }
+
+
+    public static Character[] getCharList(String[] args) {
+        String inputType = getParamValue(args, "in").toLowerCase();
+
+        switch (inputType) {
+            case "r":
+                return randomCharList(args);
+            case "m":
+                //
+            default:
+                throw new RuntimeException("Invalid param 'i'");
+        }
+    }
+
 
     public static int getDelay(String[] args) {
         String delay = getParamValue(args, "s");
