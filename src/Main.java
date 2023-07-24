@@ -7,14 +7,20 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Integer[] array1 = {25, 27, 19, 8, 16, 20, 22};
+        Integer[] array1 = randomIntList(args);
 
-        Character[] array2 = randomCharList();
+        Character[] array2 = randomCharList(args);
 
-        Methodology methodology = selectMethodology(args, array1);
+        Methodology methodology = selectMethodology(args, array2);
 
         ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args));
         organizer.sort();
+    }
+
+    public static Integer[] getInList(String[] args) {
+        String delay = getParamValue(args, "s");
+
+        return new Integer[]{1};
     }
 
     public static int getDelay(String[] args) {
@@ -37,11 +43,12 @@ public class Main {
         return randomIntList;
     }
 
-    public static Character[] randomCharList() {
+    public static Character[] randomCharList(String[] args) {
         String allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random random = new Random();
 
-        Character[] randomList = new Character[7];
+        int LENGTH =  Integer.parseInt(getParamValue(args, "r"));
+        Character[] randomList = new Character[LENGTH];
         for (int i = 0; i < randomList.length; i++) {
             int indiceAleatorio = random.nextInt(allowedCharacters.length());
             randomList[i] = allowedCharacters.charAt(indiceAleatorio);

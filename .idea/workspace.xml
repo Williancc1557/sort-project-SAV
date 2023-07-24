@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/methodologies/InsertionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=za a=i s=1000 r=30" />
+      <option name="PROGRAM_PARAMETERS" value="o=za a=i s=500 r=30" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,6 +72,7 @@
       <updated>1690044646673</updated>
       <workItem from="1690044648004" duration="21153000" />
       <workItem from="1690125561400" duration="12869000" />
+      <workItem from="1690199954198" duration="2145000" />
     </task>
     <servers />
   </component>
