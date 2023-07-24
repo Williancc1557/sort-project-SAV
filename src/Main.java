@@ -2,13 +2,19 @@ import methodologies.BobbleSort;
 import methodologies.InsertionSort;
 import methodologies.Methodology;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        String listType = getParamValue(args, "t").toLowerCase();
+        try {
+            String listType = getParamValue(args, "t").toLowerCase();
+            listTypeSwitch(listType, args);
+        } catch (RuntimeException err) {
+            System.out.println(err.getMessage());
+        }
+    }
 
+    public static void listTypeSwitch(String listType, String[] args) throws InterruptedException {
         switch (listType) {
             case "n":
                 Integer[] arrayInt = getIntList(args);
@@ -23,7 +29,6 @@ public class Main {
             default:
                 throw new RuntimeException("Invalid param 't'");
         }
-
     }
 
     public static void handleMethodology(Methodology methodology, String args[]) throws InterruptedException {
