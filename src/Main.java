@@ -1,7 +1,9 @@
 import methodologies.BobbleSort;
 import methodologies.InsertionSort;
 import methodologies.Methodology;
+import methodologies.SelectionSort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -62,7 +64,6 @@ public class Main {
         return list;
     }
 
-
     public static Character[] getCharList(String[] args) {
         String inputType = getParamValue(args, "in").toLowerCase();
 
@@ -87,7 +88,6 @@ public class Main {
         return characterArray;
 
     }
-
 
     public static int getDelay(String[] args) {
         int delay = Integer.parseInt(getParamValue(args, "s"));
@@ -136,12 +136,17 @@ public class Main {
 
         switch (type) {
             case "b":
+                System.out.println("Running with BobbleSort");
                 return new BobbleSort<>(array, isBiggerToSmaller(args));
             case "i":
+                System.out.println("Running with InsertionSort");
                 return new InsertionSort<>(array, isBiggerToSmaller(args));
+            case "s":
+                System.out.println("Running with SelectionSort");
+                return new SelectionSort<>(array, isBiggerToSmaller(args));
+            default:
+                throw new RuntimeException("Invalid param 'a'");
         }
-
-        return new BobbleSort<>(array, isBiggerToSmaller(args));
     }
 
     public static Methodology selectMethodology(String[] args, Character[] array) {
@@ -149,12 +154,17 @@ public class Main {
 
         switch (type) {
             case "b":
+                System.out.println("Running with BobbleSort");
                 return new BobbleSort<>(array, isBiggerToSmaller(args));
             case "i":
+                System.out.println("Running with InsertionSort");
                 return new InsertionSort<>(array, isBiggerToSmaller(args));
+            case "s":
+                System.out.println("Running with SelectionSort");
+                return new SelectionSort<>(array, isBiggerToSmaller(args));
+            default:
+                throw new RuntimeException("Invalid param 'a'");
         }
-
-        return new BobbleSort<>(array, isBiggerToSmaller(args));
     }
 
     public static boolean isBiggerToSmaller(String[] args) {
