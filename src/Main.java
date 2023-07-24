@@ -90,16 +90,25 @@ public class Main {
 
 
     public static int getDelay(String[] args) {
-        String delay = getParamValue(args, "s");
+        int delay = Integer.parseInt(getParamValue(args, "s"));
 
-        return Integer.parseInt(delay);
+        if (!(delay >= 100 && delay <= 1000)) throw new RuntimeException("Invalid delay provided [100, 1000]");
+
+        return delay;
+    }
+
+    public static int getArrayLenght(String[] args) {
+        int LENGTH = Integer.parseInt(getParamValue(args, "r"));
+
+        if (!(LENGTH > 0 && LENGTH <=40)) throw new RuntimeException("Invalid param 'r'");
+
+        return LENGTH;
     }
 
     public static Integer[] randomIntList(String[] args) {
-        int LENGTH =  Integer.parseInt(getParamValue(args, "r"));
-        Integer[] randomIntList = new Integer[LENGTH];
-
+        Integer[] randomIntList = new Integer[getArrayLenght(args)];
         Random random = new Random();
+
         for (int i = 0; i < randomIntList.length; i++) {
             int MAX = 40;
             int MIN = 1;
@@ -113,8 +122,7 @@ public class Main {
         String allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random random = new Random();
 
-        int LENGTH =  Integer.parseInt(getParamValue(args, "r"));
-        Character[] randomList = new Character[LENGTH];
+        Character[] randomList = new Character[getArrayLenght(args)];
         for (int i = 0; i < randomList.length; i++) {
             int indiceAleatorio = random.nextInt(allowedCharacters.length());
             randomList[i] = allowedCharacters.charAt(indiceAleatorio);
