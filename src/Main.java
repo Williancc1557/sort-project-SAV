@@ -21,7 +21,7 @@ public class Main {
                 handleMethodology(methodologyChar, args);
                 break;
             default:
-                throw new RuntimeException("Invalid parameter 't'");
+                throw new RuntimeException("Invalid param 't'");
         }
 
     }
@@ -40,7 +40,7 @@ public class Main {
             case "m":
                 return convertInputToIntList(args);
             default:
-                throw new RuntimeException("Invalid param '1'");
+                throw new RuntimeException("Invalid param 'in'");
         }
     }
 
@@ -65,10 +65,22 @@ public class Main {
             case "r":
                 return randomCharList(args);
             case "m":
-                //
+                return convertInputToCharList(args);
             default:
-                throw new RuntimeException("Invalid param 'i'");
+                throw new RuntimeException("Invalid param 'in'");
         }
+    }
+
+    public static Character[] convertInputToCharList(String[] args) {
+        char[] charArray = getParamValue(args, "v").replaceAll(",", "").toCharArray();
+
+        Character[] characterArray = new Character[charArray.length];
+        for (int i = 0; i < charArray.length; i++) {
+            characterArray[i] = charArray[i];
+        }
+
+        return characterArray;
+
     }
 
 
