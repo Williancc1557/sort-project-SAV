@@ -51,7 +51,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=za a=i s=500 r=10 t=n in=m v=10,20,30,40,50" />
+      <option name="PROGRAM_PARAMETERS" value="o=za a=i s=500 r=10 t=n in=r v=100,20,30,40,50" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -72,7 +72,7 @@
       <updated>1690044646673</updated>
       <workItem from="1690044648004" duration="21153000" />
       <workItem from="1690125561400" duration="12869000" />
-      <workItem from="1690199954198" duration="5437000" />
+      <workItem from="1690199954198" duration="5839000" />
     </task>
     <servers />
   </component>

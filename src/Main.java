@@ -49,7 +49,9 @@ public class Main {
 
         Integer[] list = new Integer[inputType.length];
         for (int i = 0; i < list.length; i++) {
-            list[i] = Integer.parseInt(inputType[i]);
+            int value = Integer.parseInt(inputType[i]);
+            if (!(value > -1000 && value < 1000)) throw new RuntimeException("Invalid value " + value);
+            list[i] = value;
         }
 
         return list;
