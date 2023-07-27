@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DIAGRAMA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sav.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +48,34 @@
     &quot;nodejs.protractor.protractor_package&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/home/willian/Documents/jala/2 periodo/modulo 1/programming 2/SAV/MVP/Sort Project/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.sav">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=az a=s s=500 r=10 t=c in=m v=A,D,C,W,Y,J" />
+      <option name="PROGRAM_PARAMETERS" value="o=az a=s s=500 r=10 t=c in=r v=A,D,C,W,Y,J" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="sav" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="o" value="az a=s s=500 r=20 t=n v=1,2,4,3" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="sav" />
+      <module name="Sort Project" />
+      <option name="PROGRAM_PARAMETERS" value="t=c v=D,z,a,w" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.sav" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -84,7 +101,10 @@
       <workItem from="1690414549876" duration="643000" />
       <workItem from="1690420911570" duration="89000" />
       <workItem from="1690421052881" duration="236000" />
-      <workItem from="1690422146471" duration="1700000" />
+      <workItem from="1690422146471" duration="1792000" />
+      <workItem from="1690424760525" duration="171000" />
+      <workItem from="1690425457758" duration="258000" />
+      <workItem from="1690425741039" duration="4616000" />
     </task>
     <servers />
   </component>

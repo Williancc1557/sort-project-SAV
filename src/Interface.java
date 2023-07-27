@@ -6,7 +6,8 @@ public abstract class Interface <T> {
         for (T element : array) {
             System.out.print(element + ":  ");
             try {
-                System.out.println("*".repeat((int) element));
+                int elementInt = (int) element;
+                System.out.println("*".repeat(Math.max(elementInt, 0)));
             } catch (ClassCastException err){
                 char elementChar = (char) element;
                 System.out.println("*".repeat(elementChar - 64));
