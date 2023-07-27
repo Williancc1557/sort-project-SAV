@@ -3,10 +3,9 @@ import methodologies.InsertionSort;
 import methodologies.Methodology;
 import methodologies.SelectionSort;
 
-import java.util.Arrays;
 import java.util.Random;
 
-public class Main {
+public class sav {
     public static void main(String[] args) throws InterruptedException {
         try {
             String listType = getParamValue(args, "t").toLowerCase();
