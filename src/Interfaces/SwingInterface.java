@@ -2,7 +2,6 @@ package Interfaces;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Arrays;
 
 
 public class SwingInterface <T> extends JFrame implements Interface<T> {
@@ -23,7 +22,7 @@ public class SwingInterface <T> extends JFrame implements Interface<T> {
     @Override
     public void showStep(T[] array, int step) {
             graphPanel.removeAll();
-            graphPanel.add(new Graphic<>(array), BorderLayout.CENTER);
+            graphPanel.add(new Graphic<>(array, step), BorderLayout.CENTER);
             graphPanel.revalidate();
             graphPanel.repaint();
     };
@@ -32,9 +31,17 @@ public class SwingInterface <T> extends JFrame implements Interface<T> {
 class Graphic<T> extends JPanel {
     private T[] array;
 
-    public Graphic(T[] array) {
+    public Graphic(T[] array, int step) {
         this.array = array;
         setBackground(Color.WHITE);
+
+        JLabel label = new JLabel("STEP: " + step);
+
+        Font font = label.getFont();
+        int tamanhoFonte = 24; // Tamanho da fonte desejado
+        label.setFont(new Font(font.getName(), font.getStyle(), tamanhoFonte));
+
+        add(label);
     }
 
     @Override
@@ -47,20 +54,36 @@ class Graphic<T> extends JPanel {
 
         int spacement = (width / array.length) / array.length;
         int barWidth = width / array.length - spacement;
-        int maxHeight = height / getMaxValue(array);
 
         for (int i = 0; i < array.length; i++) {
-            int barHeight = (Integer) array[i] + maxHeight / 2 ;
+            int barHeight = array[i] instanceof Integer ? (Integer) array[i] : (Character) array[i] * 3;
             int x = i * (barWidth + spacement);
             int y = height - barHeight;
+
+            // Adicionando cor diferente para cada barra
+            Color barColor = new Color(50, 100, 200);
+            g.setColor(barColor);
+
             g.fillRect(x, y, barWidth, barHeight);
+
+            // Adicionando rótulo na barra
+            g.setColor(Color.BLACK);
+            String valueLabel = String.valueOf(array[i]);
+            int labelX = x + barWidth / 2 - g.getFontMetrics().stringWidth(valueLabel) / 2;
+            int labelY = y - 5;
+            g.drawString(valueLabel, labelX, labelY);
         }
     }
 
+
     private Integer getMaxValue(T[] array) {
-        Integer number = -1;
+        int number = -1;
         for (T t : array) {
-            if ((Integer) t > number) number = (Integer) t;
+            if (t instanceof Integer) {
+                if ((Integer) t > number) number = (Integer) t;
+            } else {
+                if ((Character) t > number) number = (Character) t;
+            }
         }
 
         return number;

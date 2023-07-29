@@ -15,9 +15,10 @@ public class ArrayOrganizer {
 
     public void sort() throws InterruptedException {
         while (!methodology.isOrganized()) {
-            methodology.handle();
-            Thread.sleep(delay);
             interfaceD.showStep(methodology.getArray(), methodology.getStep());
+            methodology.handle();
+            interfaceD.showStep(methodology.getArray(), methodology.getStep());
+            Thread.sleep(delay);
         }
     }
 }

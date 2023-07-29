@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Interface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ArrayOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayOrganizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/TerminalInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/SwingInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sav.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +66,7 @@
     <configuration name="sav" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sav" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=az a=i s=500 r=20 t=n v=1,3,2,5,7,8,500" />
+      <option name="PROGRAM_PARAMETERS" value="o=za a=b s=500 r=20 t=c in=m v=a,c,d,b,w" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +106,7 @@
       <workItem from="1690425741039" duration="4616000" />
       <workItem from="1690431873091" duration="217000" />
       <workItem from="1690516374894" duration="1365000" />
-      <workItem from="1690660344417" duration="6744000" />
+      <workItem from="1690660344417" duration="9825000" />
     </task>
     <servers />
   </component>
@@ -121,33 +118,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="22" />
+          <line>58</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="27" />
+          <line>59</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
