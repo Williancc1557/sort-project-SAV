@@ -26,7 +26,7 @@ public class InsertionSort <T extends Comparable<T>> implements Methodology {
 
         int j = index - 1;
 
-        if (!invertOrder) {
+        if (invertOrder) {
             while (j >= 0 && key.compareTo(array[j]) > 0) {
                 array[j + 1] = array[j];
                 --j;
@@ -69,7 +69,7 @@ public class InsertionSort <T extends Comparable<T>> implements Methodology {
             T firstElement = array[i];
             T secondElement = array[i + 1];
 
-            boolean validation = invertOrder ?
+            boolean validation = !invertOrder ?
                     firstElement.compareTo(secondElement) > 0 :
                     secondElement.compareTo(firstElement) > 0;
 

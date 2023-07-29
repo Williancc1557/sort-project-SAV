@@ -1,6 +1,6 @@
-import java.util.Arrays;
+package Interfaces;
 
-public abstract class Interface <T> {
+public class TerminalInterface<T> implements Interface<T> {
     public void showStep(T[] array, int step) {
         System.out.println("------------------ STEP " + step + " -------------------");
         for (T element : array) {

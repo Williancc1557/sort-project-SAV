@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArrayOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayOrganizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/TerminalInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sav.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +43,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;willian-cavalcanti-coelho&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -62,12 +67,9 @@
       </method>
     </configuration>
     <configuration name="sav" type="Application" factoryName="Application" nameIsGenerated="true">
-      <envs>
-        <env name="o" value="az a=s s=500 r=20 t=n v=1,2,4,3" />
-      </envs>
       <option name="MAIN_CLASS_NAME" value="sav" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="t=c v=D,z,a,w" />
+      <option name="PROGRAM_PARAMETERS" value="o=az a=i s=500 r=20 t=n v=1,3,2,5,7,8,500" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,10 +107,49 @@
       <workItem from="1690424760525" duration="171000" />
       <workItem from="1690425457758" duration="258000" />
       <workItem from="1690425741039" duration="4616000" />
+      <workItem from="1690431873091" duration="217000" />
+      <workItem from="1690516374894" duration="1365000" />
+      <workItem from="1690660344417" duration="6744000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -23,7 +23,7 @@ public class SelectionSort <T extends Comparable<T>> implements  Methodology {
         int minIndex = index;
 
         for (int j = index + 1; j < n; j++) {
-            boolean validation = !invertOrder ?
+            boolean validation = invertOrder ?
                     array[j].compareTo(array[minIndex]) > 0 :
                     array[minIndex].compareTo(array[j]) > 0;
             if (validation) {
@@ -65,7 +65,7 @@ public class SelectionSort <T extends Comparable<T>> implements  Methodology {
             T firstElement = array[i];
             T secondElement = array[i + 1];
 
-            boolean validation = invertOrder ?
+            boolean validation = !invertOrder ?
                     firstElement.compareTo(secondElement) > 0 :
                     secondElement.compareTo(firstElement) > 0;
 

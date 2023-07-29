@@ -1,3 +1,6 @@
+import Interfaces.Interface;
+import Interfaces.SwingInterface;
+import Interfaces.TerminalInterface;
 import methodologies.BobbleSort;
 import methodologies.InsertionSort;
 import methodologies.Methodology;
@@ -37,7 +40,8 @@ public class sav {
     }
 
     public static void handleMethodology(Methodology methodology, String args[]) throws InterruptedException {
-        ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args));
+        SwingInterface interfaceD = new SwingInterface();
+        ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args), interfaceD);
         organizer.sort();
     }
 
