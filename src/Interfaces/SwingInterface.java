@@ -12,7 +12,7 @@ public class SwingInterface <T> extends JFrame implements Interface<T> {
         graphPanel = new JPanel();
         graphPanel.setLayout(new BorderLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(700, 700);
+        setSize(700, 800);
         getContentPane().add(graphPanel, BorderLayout.CENTER);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -52,11 +52,11 @@ class Graphic<T> extends JPanel {
         int height = getHeight();
         g.setColor(Color.RED);
 
-        int spacement = (width / array.length) / array.length;
+        int spacement = (width / array.length) / array.length + 20;
         int barWidth = width / array.length - spacement;
 
         for (int i = 0; i < array.length; i++) {
-            int barHeight = array[i] instanceof Integer ? (Integer) array[i] : (Character) array[i] * 3;
+            int barHeight = array[i] instanceof Integer ? (Integer) array[i] : (Character) array[i] ;
             int x = i * (barWidth + spacement);
             int y = height - barHeight;
 

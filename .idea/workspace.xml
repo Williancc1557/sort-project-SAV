@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayOrganizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaces/SwingInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sav.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,27 +103,11 @@
       <workItem from="1690425741039" duration="4616000" />
       <workItem from="1690431873091" duration="217000" />
       <workItem from="1690516374894" duration="1365000" />
-      <workItem from="1690660344417" duration="9825000" />
+      <workItem from="1690660344417" duration="10136000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Interfaces/SwingInterface.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
