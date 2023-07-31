@@ -40,7 +40,7 @@ public class sav {
     }
 
     public static void handleMethodology(Methodology methodology, String args[]) throws InterruptedException {
-        Interface interfaceD = new SwingInterface();
+        Interface interfaceD = new TerminalInterface();
         ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args), interfaceD);
         organizer.sort();
     }

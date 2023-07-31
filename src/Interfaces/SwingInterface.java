@@ -52,7 +52,7 @@ class Graphic<T> extends JPanel {
         int height = getHeight();
         g.setColor(Color.RED);
 
-        int spacement = (width / array.length) / array.length + 20;
+        int spacement = (width / array.length) / (array.length - 1);
         int barWidth = width / array.length - spacement;
 
         for (int i = 0; i < array.length; i++) {
