@@ -63,9 +63,9 @@ class Graphic<T> extends JPanel {
                 int intValue = (Integer) array[i];
                 if (intValue < 0) {
                     // Ajustar o tamanho da barra com base na distância até zero
-                    barHeight = (intValue + 1000) / 2; // Ajuste a constante conforme necessário
+                    barHeight = (intValue + Math.abs(minValue)) / 2; // Ajuste a constante conforme necessário
                 } else {
-                    barHeight = (intValue + 1000) / 2; // Ajustar o valor para começar do valor mínimo
+                    barHeight = (intValue + Math.abs(minValue)) / 2; // Ajustar o valor para começar do valor mínimo
                 }
             } else {
                 int charValue = ((Character) array[i] - 64) * 4;
