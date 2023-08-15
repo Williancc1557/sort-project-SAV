@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/SwingInterface/Graphic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface/Graphic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SAV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SAV.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +65,7 @@
     <configuration name="SAV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SAV" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=za a=i s=100 r=20 t=n in=m v=&quot;-500,-600,-10,-21,10,40,100,900&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="o=za a=i s=100 r=20 t=n in=m v=&quot;-500,-1000,-10,-21,10,40,100,1000&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,7 +122,8 @@
       <workItem from="1690839708648" duration="43000" />
       <workItem from="1692067876651" duration="184000" />
       <workItem from="1692103180094" duration="5065000" />
-      <workItem from="1692114928747" duration="2549000" />
+      <workItem from="1692114928747" duration="2654000" />
+      <workItem from="1692118732827" duration="807000" />
     </task>
     <servers />
   </component>

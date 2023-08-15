@@ -45,8 +45,10 @@ class Graphic<T> extends JPanel {
         int barHeight;
 
         if (array[i] instanceof Integer) {
+            int minValue = getMinValue(array);
             int intValue = (Integer) array[i];
-            return (intValue + Math.abs(getMinValue(array))) / 2;
+            int reduce = minValue > -700 ? 2 : 3;
+            return (intValue + Math.abs(minValue)) / reduce;
         }
 
         int charValue = ((Character) array[i] - 64) * 4;
