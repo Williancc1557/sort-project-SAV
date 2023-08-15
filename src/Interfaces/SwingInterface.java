@@ -57,20 +57,7 @@ class Graphic<T> extends JPanel {
         int minValue = getMinValue(array); // Obter o valor mínimo do array
 
         for (int i = 0; i < array.length; i++) {
-            int barHeight;
-
-            if (array[i] instanceof Integer) {
-                int intValue = (Integer) array[i];
-                if (intValue < 0) {
-                    // Ajustar o tamanho da barra com base na distância até zero
-                    barHeight = (intValue + Math.abs(minValue)) / 2; // Ajuste a constante conforme necessário
-                } else {
-                    barHeight = (intValue + Math.abs(minValue)) / 2; // Ajustar o valor para começar do valor mínimo
-                }
-            } else {
-                int charValue = ((Character) array[i] - 64) * 4;
-                barHeight = Math.abs(charValue); // Adicionar a constante aqui
-            }
+            int barHeight = getBarHeight(i, minValue);
 
             int x = i * (barWidth + spacement);
             int y = height - barHeight;
@@ -88,6 +75,25 @@ class Graphic<T> extends JPanel {
             int labelY = y - 5;
             g.drawString(valueLabel, labelX, labelY);
         }
+    }
+
+    private int getBarHeight(int i, int minValue) {
+        int barHeight;
+
+        if (array[i] instanceof Integer) {
+            int intValue = (Integer) array[i];
+            if (intValue < 0) {
+                // Ajustar o tamanho da barra com base na distância até zero
+                barHeight = (intValue + Math.abs(minValue)) / 2; // Ajuste a constante conforme necessário
+            } else {
+                barHeight = (intValue + Math.abs(minValue)) / 2; // Ajustar o valor para começar do valor mínimo
+            }
+        } else {
+            int charValue = ((Character) array[i] - 64) * 4;
+            barHeight = Math.abs(charValue); // Adicionar a constante aqui
+        }
+
+        return barHeight;
     }
 
     private Integer getMinValue(T[] array) {
