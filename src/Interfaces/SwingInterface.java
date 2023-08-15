@@ -12,7 +12,7 @@ public class SwingInterface <T> extends JFrame implements Interface<T> {
         graphPanel = new JPanel();
         graphPanel.setLayout(new BorderLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(700, 800);
+        setSize(700, 1000);
         getContentPane().add(graphPanel, BorderLayout.CENTER);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -50,18 +50,33 @@ class Graphic<T> extends JPanel {
 
         int width = getWidth();
         int height = getHeight();
-        g.setColor(Color.RED);
 
         int spacement = (width / array.length) / (array.length - 1);
         int barWidth = width / array.length - spacement;
 
+        int minValue = getMinValue(array); // Obter o valor mínimo do array
+
         for (int i = 0; i < array.length; i++) {
-            int barHeight = array[i] instanceof Integer ? (Integer) array[i] : (Character) array[i] ;
+            int barHeight;
+
+            if (array[i] instanceof Integer) {
+                int intValue = (Integer) array[i];
+                if (intValue < 0) {
+                    // Ajustar o tamanho da barra com base na distância até zero
+                    barHeight = (intValue + 1000) / 2; // Ajuste a constante conforme necessário
+                } else {
+                    barHeight = (intValue + 1000) / 2; // Ajustar o valor para começar do valor mínimo
+                }
+            } else {
+                int charValue = ((Character) array[i] - 64) * 4;
+                barHeight = Math.abs(charValue); // Adicionar a constante aqui
+            }
+
             int x = i * (barWidth + spacement);
             int y = height - barHeight;
 
             // Adicionando cor diferente para cada barra
-            Color barColor = new Color(50, 100, 200);
+            Color barColor = array[i] instanceof Integer ? new Color(50, 100, 200) : new Color(255, 0, 0);
             g.setColor(barColor);
 
             g.fillRect(x, y, barWidth, barHeight);
@@ -75,17 +90,14 @@ class Graphic<T> extends JPanel {
         }
     }
 
-
-    private Integer getMaxValue(T[] array) {
-        int number = -1;
+    private Integer getMinValue(T[] array) {
+        int number = Integer.MAX_VALUE;
         for (T t : array) {
             if (t instanceof Integer) {
-                if ((Integer) t > number) number = (Integer) t;
-            } else {
-                if ((Character) t > number) number = (Character) t;
+                if ((Integer) t < number) number = (Integer) t;
             }
         }
-
         return number;
     }
+
 }

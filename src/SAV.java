@@ -1,6 +1,5 @@
 import Interfaces.Interface;
 import Interfaces.SwingInterface;
-import Interfaces.TerminalInterface;
 import methodologies.BobbleSort;
 import methodologies.InsertionSort;
 import methodologies.Methodology;
@@ -10,7 +9,7 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class sav {
+public class SAV {
     public static void main(String[] args) throws InterruptedException {
         try {
             String listType = getParamValue(args, "t").toLowerCase();
@@ -40,7 +39,7 @@ public class sav {
     }
 
     public static void handleMethodology(Methodology methodology, String args[]) throws InterruptedException {
-        Interface interfaceD = new TerminalInterface();
+        Interface interfaceD = new SwingInterface();
         ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args), interfaceD);
         organizer.sort();
     }
