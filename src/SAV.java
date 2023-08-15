@@ -190,15 +190,7 @@ public class SAV {
     public static boolean isBiggerToSmaller(String[] args) {
         String biggerToSmallerOrSmallerToBigger = getParamValue(args, "o").toLowerCase();
 
-        boolean invertOrder = false;
-
-        switch (biggerToSmallerOrSmallerToBigger) {
-            case "az":
-                invertOrder = true;
-                break;
-        }
-
-        return invertOrder;
+        return biggerToSmallerOrSmallerToBigger.equals("az");
     }
 
     public static String getParamValue(String[] args, String field) {
@@ -210,14 +202,18 @@ public class SAV {
         }
 
         switch (field) {
-            case "in":
+            case "in" -> {
                 return "m";
-            case "a":
+            }
+            case "a" -> {
                 return "b";
-            case "o":
+            }
+            case "o" -> {
                 return "az";
-            case "s":
+            }
+            case "s" -> {
                 return "800";
+            }
         }
 
         throw new RuntimeException("Invalid param provided");
