@@ -1,5 +1,5 @@
 import Interfaces.Interface;
-import Interfaces.SwingInterface;
+import Interfaces.SwingInterface.SwingInterface;
 import methodologies.BobbleSort;
 import methodologies.InsertionSort;
 import methodologies.Methodology;
