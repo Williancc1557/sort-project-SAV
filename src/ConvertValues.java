@@ -10,12 +10,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ConvertValues {
-    public static void handleMethodology(Methodology methodology, String args[]) throws InterruptedException {
-        Interface interfaceD = new SwingInterface();
-        ArrayOrganizer organizer = new ArrayOrganizer(methodology, getDelay(args), interfaceD);
-        organizer.sort();
-    }
-
     public static Integer[] getIntList(String[] args) {
         String inputType = getParamValue(args, "in").toLowerCase();
 
@@ -126,37 +120,41 @@ public class ConvertValues {
     public static Methodology selectMethodology(String[] args, Integer[] array) {
         String type = getParamValue(args, "a").toLowerCase();
 
-        switch (type) {
-            case "b":
+        return switch (type) {
+            case "b" -> {
                 System.out.println("Running with BobbleSort");
-                return new BobbleSort<>(array, isBiggerToSmaller(args));
-            case "i":
+                yield new BobbleSort<>(array, isBiggerToSmaller(args));
+            }
+            case "i" -> {
                 System.out.println("Running with InsertionSort");
-                return new InsertionSort<>(array, isBiggerToSmaller(args));
-            case "s":
+                yield new InsertionSort<>(array, isBiggerToSmaller(args));
+            }
+            case "s" -> {
                 System.out.println("Running with SelectionSort");
-                return new SelectionSort<>(array, isBiggerToSmaller(args));
-            default:
-                throw new RuntimeException("Invalid param 'a'");
-        }
+                yield new SelectionSort<>(array, isBiggerToSmaller(args));
+            }
+            default -> throw new RuntimeException("Invalid param 'a'");
+        };
     }
 
     public static Methodology selectMethodology(String[] args, Character[] array) {
         String type = getParamValue(args, "a").toLowerCase();
 
-        switch (type) {
-            case "b":
+        return switch (type) {
+            case "b" -> {
                 System.out.println("Running with BobbleSort");
-                return new BobbleSort<>(array, isBiggerToSmaller(args));
-            case "i":
+                yield new BobbleSort<>(array, isBiggerToSmaller(args));
+            }
+            case "i" -> {
                 System.out.println("Running with InsertionSort");
-                return new InsertionSort<>(array, isBiggerToSmaller(args));
-            case "s":
+                yield new InsertionSort<>(array, isBiggerToSmaller(args));
+            }
+            case "s" -> {
                 System.out.println("Running with SelectionSort");
-                return new SelectionSort<>(array, isBiggerToSmaller(args));
-            default:
-                throw new RuntimeException("Invalid param 'a'");
-        }
+                yield new SelectionSort<>(array, isBiggerToSmaller(args));
+            }
+            default -> throw new RuntimeException("Invalid param 'a'");
+        };
     }
 
     public static boolean isBiggerToSmaller(String[] args) {

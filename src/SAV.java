@@ -1,14 +1,7 @@
 import Interfaces.Interface;
 import Interfaces.SwingInterface.SwingInterface;
 import Interfaces.TerminalInterface;
-import methodologies.BobbleSort;
-import methodologies.InsertionSort;
 import methodologies.Methodology;
-import methodologies.SelectionSort;
-
-import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SAV {
     public static void main(String[] args) throws InterruptedException {
@@ -27,14 +20,35 @@ public class SAV {
             case "n" -> {
                 Integer[] arrayInt = ConvertValues.getIntList(args);
                 Methodology methodologyInt = ConvertValues.selectMethodology(args, arrayInt);
-                ConvertValues.handleMethodology(methodologyInt, args);
+                handleMethodology(methodologyInt, args);
             }
             case "c" -> {
                 Character[] arrayChar = ConvertValues.getCharList(args);
                 Methodology methodologyChar = ConvertValues.selectMethodology(args, arrayChar);
-                ConvertValues.handleMethodology(methodologyChar, args);
+                handleMethodology(methodologyChar, args);
             }
             default -> throw new RuntimeException("Invalid param 't'");
+        }
+    }
+
+    public static void handleMethodology(Methodology methodology, String[] args) throws InterruptedException {
+        try {
+            String listType = ConvertValues.getParamValue(args, "i").toLowerCase();
+
+            Interface interfaceD = null;
+
+            if (listType.equals("t")) {
+                interfaceD = new TerminalInterface();
+            } else {
+                interfaceD = new SwingInterface();
+            }
+
+            ArrayOrganizer organizer = new ArrayOrganizer(methodology, ConvertValues.getDelay(args), interfaceD);
+            organizer.sort();
+        } catch (RuntimeException err) {
+            Interface interfaceD = new SwingInterface();
+            ArrayOrganizer organizer = new ArrayOrganizer(methodology, ConvertValues.getDelay(args), interfaceD);
+            organizer.sort();
         }
     }
 }

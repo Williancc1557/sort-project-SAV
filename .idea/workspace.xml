@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sort Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sort Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConvertValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConvertValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/SwingInterface/RenderInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SAV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SAV.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
       <recent name="$PROJECT_DIR$/src/Interfaces/SwingInterface" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.sav.jar">
+  <component name="RunManager" selected="Application.SAV">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Sort Project" />
@@ -71,7 +72,7 @@
     <configuration name="SAV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SAV" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=az a=b s=400 r=20 t=n in=m v=&quot;-500,-1000,-10,-21,10,40,100,1000&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="o=az a=b s=600 r=20 t=n in=m v=&quot;-500,-1000,-10,-21,10,40,100,1000&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +87,7 @@
     </configuration>
     <configuration name="sav.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/sav.jar" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
     <list>
@@ -96,8 +98,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.sav.jar" />
         <item itemvalue="Application.SAV" />
+        <item itemvalue="JAR Application.sav.jar" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -141,6 +143,7 @@
       <workItem from="1692386448841" duration="674000" />
       <workItem from="1692618842220" duration="1126000" />
       <workItem from="1692620048563" duration="681000" />
+      <workItem from="1692715618120" duration="2667000" />
     </task>
     <servers />
   </component>
