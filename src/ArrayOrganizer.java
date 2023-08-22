@@ -4,7 +4,7 @@ import methodologies.Methodology;
 
 public class ArrayOrganizer {
     public Interface interfaceD;
-    private int delay;
+    private final int delay;
     public Methodology methodology;
 
     public ArrayOrganizer(Methodology methodology, int delay, Interface interfaceD) {
