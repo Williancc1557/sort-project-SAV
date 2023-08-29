@@ -26,7 +26,7 @@ class Graphic<T> extends JPanel {
         int width = getWidth();
         int height = getHeight();
 
-        int spacement = (width / array.length) / (array.length - 1);
+        int spacement = (width / array.length) / (array.length ) + 20;
         int barWidth = width / array.length - spacement;
 
         for (int i = 0; i < array.length; i++) {

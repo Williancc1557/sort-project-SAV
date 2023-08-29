@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayOrganizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaces/SwingInterface/Graphic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface/Graphic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/SwingInterface/SwingInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/SwingInterface/SwingInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/TerminalInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/TerminalInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SAV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SAV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methodologies/BobbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/methodologies/BobbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methodologies/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/methodologies/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methodologies/Methodology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/methodologies/Methodology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methodologies/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/methodologies/SelectionSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +43,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;willian-cavalcanti-coelho&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/willian/Documents/jala/2 periodo/modulo 1/programming 2/SAV/MVP/Sort Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/willian/Documents/jala&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -158,6 +149,8 @@
       <workItem from="1692731699634" duration="25000" />
       <workItem from="1692731802441" duration="89000" />
       <workItem from="1693263990366" duration="3277000" />
+      <workItem from="1693268736646" duration="696000" />
+      <workItem from="1693318006525" duration="492000" />
     </task>
     <servers />
   </component>

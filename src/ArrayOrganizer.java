@@ -28,8 +28,6 @@ public class ArrayOrganizer {
     }
 
     public void getMilisecondTimeOfExecution(long initialTime, long endTime)  {
-        System.out.println(endTime);
-        System.out.println(initialTime);
         milisecondTimeOfExecution += (double) (endTime - initialTime) / 1_000_000_000.0;
     }
 }
