@@ -6,11 +6,6 @@ public class SelectionSort <T extends Comparable<T>> implements  Methodology {
     private int index = 0;
     private boolean invertOrder;
 
-    public SelectionSort(T[] array) {
-        this.array = array;
-        this.invertOrder = false;
-    }
-
     public SelectionSort(T[] array, boolean invertOrder) {
         this.array = array;
         this.invertOrder = invertOrder;
@@ -43,11 +38,6 @@ public class SelectionSort <T extends Comparable<T>> implements  Methodology {
     @Override
     public T[] getArray() {
         return array;
-    }
-
-    @Override
-    public int getIndex() {
-        return index;
     }
 
     @Override

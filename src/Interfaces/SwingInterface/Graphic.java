@@ -6,14 +6,14 @@ import java.awt.*;
 class Graphic<T> extends JPanel {
     private T[] array;
 
-    public Graphic(T[] array, int step) {
+    public Graphic(T[] array, int step, double miliSeconds) {
         this.array = array;
         setBackground(Color.WHITE);
 
-        JLabel label = new JLabel("STEP: " + step);
+        JLabel label = new JLabel("STEP: " + step + " | " + Math.round(miliSeconds) + " Seconds");
 
         Font font = label.getFont();
-        int tamanhoFonte = 24; // Tamanho da fonte desejado
+        int tamanhoFonte = 24;
         label.setFont(new Font(font.getName(), font.getStyle(), tamanhoFonte));
 
         add(label);

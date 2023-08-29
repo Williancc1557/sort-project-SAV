@@ -35,7 +35,7 @@ public class SAV {
         try {
             String listType = ConvertValues.getParamValue(args, "i").toLowerCase();
 
-            Interface interfaceD = null;
+            Interface interfaceD;
 
             if (listType.equals("t")) {
                 interfaceD = new TerminalInterface();

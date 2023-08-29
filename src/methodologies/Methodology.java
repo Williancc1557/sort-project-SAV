@@ -5,6 +5,5 @@ public interface Methodology<T> {
     void increaseStep();
     T[] getArray();
     int getStep();
-    int getIndex();
     boolean isOrganized();
 }

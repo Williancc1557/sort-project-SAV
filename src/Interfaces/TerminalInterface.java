@@ -1,7 +1,7 @@
 package Interfaces;
 
 public class TerminalInterface<T> implements Interface<T> {
-    public void showStep(T[] array, int step) {
+    public void showStep(T[] array, int step, double miliSeconds) {
         System.out.println("------------------ STEP " + step + " -------------------");
         for (T element : array) {
             System.out.print(element + ":  ");

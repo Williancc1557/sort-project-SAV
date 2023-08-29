@@ -8,11 +8,6 @@ public class InsertionSort <T extends Comparable<T>> implements Methodology {
     private int index = 0;
     private boolean invertOrder;
 
-    public InsertionSort(T[] array) {
-        this.array = array;
-        this.invertOrder = false;
-    }
-
     public InsertionSort(T[] array, boolean invertOrder) {
         this.array = array;
         this.invertOrder = invertOrder;
@@ -47,11 +42,6 @@ public class InsertionSort <T extends Comparable<T>> implements Methodology {
     @Override
     public T[] getArray() {
         return array;
-    }
-
-    @Override
-    public int getIndex() {
-        return index;
     }
 
     @Override

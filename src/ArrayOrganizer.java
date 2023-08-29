@@ -1,11 +1,11 @@
 import Interfaces.Interface;
-import Interfaces.TerminalInterface;
 import methodologies.Methodology;
 
 public class ArrayOrganizer {
     public Interface interfaceD;
     private final int delay;
     public Methodology methodology;
+    private double milisecondTimeOfExecution;
 
     public ArrayOrganizer(Methodology methodology, int delay, Interface interfaceD) {
         this.delay = delay;
@@ -15,10 +15,21 @@ public class ArrayOrganizer {
 
     public void sort() throws InterruptedException {
         while (!methodology.isOrganized()) {
-            interfaceD.showStep(methodology.getArray(), methodology.getStep());
+            interfaceD.showStep(methodology.getArray(), methodology.getStep(), milisecondTimeOfExecution);
+
+            long initialTime = System.nanoTime();
+
             methodology.handle();
-            interfaceD.showStep(methodology.getArray(), methodology.getStep());
+
             Thread.sleep(delay);
+            long endTime = System.nanoTime();
+            getMilisecondTimeOfExecution(initialTime, endTime);
         }
+    }
+
+    public void getMilisecondTimeOfExecution(long initialTime, long endTime)  {
+        System.out.println(endTime);
+        System.out.println(initialTime);
+        milisecondTimeOfExecution += (double) (endTime - initialTime) / 1_000_000_000.0;
     }
 }

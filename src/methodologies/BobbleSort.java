@@ -1,17 +1,11 @@
 package methodologies;
 
-import java.util.Arrays;
 
 public class BobbleSort <T extends Comparable<T>> implements Methodology {
     private T[] array;
     private int step = 0;
     private int index = 0;
     private boolean invertOrder;
-
-    public BobbleSort(T[] array) {
-        this.array = array;
-        this.invertOrder = false;
-    }
 
     public BobbleSort(T[] array, boolean invertOrder) {
         this.array = array;
@@ -41,11 +35,6 @@ public class BobbleSort <T extends Comparable<T>> implements Methodology {
     @Override
     public T[] getArray() {
         return array;
-    }
-
-    @Override
-    public int getIndex() {
-        return index;
     }
 
     @Override
