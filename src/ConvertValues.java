@@ -1,5 +1,3 @@
-import Interfaces.Interface;
-import Interfaces.SwingInterface.SwingInterface;
 import methodologies.BobbleSort;
 import methodologies.InsertionSort;
 import methodologies.Methodology;
@@ -13,14 +11,11 @@ public class ConvertValues {
     public static Integer[] getIntList(String[] args) {
         String inputType = getParamValue(args, "in").toLowerCase();
 
-        switch (inputType) {
-            case "r":
-                return randomIntList(args);
-            case "m":
-                return convertInputToIntList(args);
-            default:
-                throw new RuntimeException("Invalid param 'in'");
-        }
+        return switch (inputType) {
+            case "r" -> randomIntList(args);
+            case "m" -> convertInputToIntList(args);
+            default -> throw new RuntimeException("Invalid param 'in'");
+        };
     }
 
     public static Integer[] convertInputToIntList(String[] args) {
@@ -39,14 +34,11 @@ public class ConvertValues {
     public static Character[] getCharList(String[] args) {
         String inputType = getParamValue(args, "in").toLowerCase();
 
-        switch (inputType) {
-            case "r":
-                return randomCharList(args);
-            case "m":
-                return convertInputToCharList(args);
-            default:
-                throw new RuntimeException("Invalid param 'in'");
-        }
+        return switch (inputType) {
+            case "r" -> randomCharList(args);
+            case "m" -> convertInputToCharList(args);
+            default -> throw new RuntimeException("Invalid param 'in'");
+        };
     }
 
     public static Character[] convertInputToCharList(String[] args) {
@@ -110,8 +102,8 @@ public class ConvertValues {
 
         Character[] randomList = new Character[getArrayLenght(args)];
         for (int i = 0; i < randomList.length; i++) {
-            int indiceAleatorio = random.nextInt(allowedCharacters.length());
-            randomList[i] = allowedCharacters.charAt(indiceAleatorio);
+            int randomIndex = random.nextInt(allowedCharacters.length());
+            randomList[i] = allowedCharacters.charAt(randomIndex);
         }
 
         return randomList;
