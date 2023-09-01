@@ -13,6 +13,7 @@ public class ArrayOrganizer {
         this.interfaceD = interfaceD;
     }
 
+    @SuppressWarnings("unchecked")
     public void sort() throws InterruptedException {
         while (!methodology.isOrganized()) {
             interfaceD.showStep(methodology.getArray(), methodology.getStep(), milisecondTimeOfExecution);
