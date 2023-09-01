@@ -75,7 +75,7 @@ public class ConvertValues {
         return delay;
     }
 
-    public static int getArrayLenght(String[] args) {
+    public static int getArrayLength(String[] args) {
         int LENGTH = Integer.parseInt(getParamValue(args, "r"));
 
         if (!(LENGTH > 0 && LENGTH <=40)) throw new RuntimeException("Invalid param 'r'");
@@ -84,7 +84,7 @@ public class ConvertValues {
     }
 
     public static Integer[] randomIntList(String[] args) {
-        Integer[] randomIntList = new Integer[getArrayLenght(args)];
+        Integer[] randomIntList = new Integer[getArrayLength(args)];
         Random random = new Random();
 
         for (int i = 0; i < randomIntList.length; i++) {
@@ -100,7 +100,7 @@ public class ConvertValues {
         String allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Random random = new Random();
 
-        Character[] randomList = new Character[getArrayLenght(args)];
+        Character[] randomList = new Character[getArrayLength(args)];
         for (int i = 0; i < randomList.length; i++) {
             int randomIndex = random.nextInt(allowedCharacters.length());
             randomList[i] = allowedCharacters.charAt(randomIndex);

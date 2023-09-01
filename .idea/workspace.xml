@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d2ba06-20c2-4283-a116-caf78d987afd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConvertValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConvertValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "willian-cavalcanti-coelho",
-    "last_opened_file_path": "/home/willian/Documents/jala/2 periodo/modulo 1/programming 2/SAV/MVP",
+    "last_opened_file_path": "/home/willian/Documents/jala/2 periodo/modulo 1/programming 2/SAV/MVP/Sort Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,7 +75,7 @@
     <configuration name="SAV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SAV" />
       <module name="Sort Project" />
-      <option name="PROGRAM_PARAMETERS" value="o=az a=b s=200 r=20 t=n in=m v=&quot;-500,-1000,-10,-21,10,40,100,1000&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="o=az a=b s=200 r=20 t=c in=m v=A,C,c,a,E,x,S" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,11 +158,26 @@
       <workItem from="1693323458274" duration="88000" />
       <workItem from="1693356739449" duration="32000" />
       <workItem from="1693402954656" duration="133000" />
-      <workItem from="1693403396626" duration="1663000" />
+      <workItem from="1693403396626" duration="2131000" />
+      <workItem from="1693437348412" duration="103000" />
+      <workItem from="1693445296037" duration="1206000" />
+      <workItem from="1693446891219" duration="52000" />
+      <workItem from="1693601497033" duration="302000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
