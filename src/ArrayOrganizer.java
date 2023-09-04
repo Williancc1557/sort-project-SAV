@@ -11,6 +11,7 @@ public class ArrayOrganizer {
         this.delay = delay;
         this.methodology = methodology;
         this.interfaceD = interfaceD;
+        this.milisecondTimeOfExecution = 0;
     }
 
     @SuppressWarnings("unchecked")
@@ -22,13 +23,13 @@ public class ArrayOrganizer {
 
             methodology.handle();
 
-            Thread.sleep(delay);
             long endTime = System.nanoTime();
             getMilisecondTimeOfExecution(initialTime, endTime);
+            Thread.sleep(delay);
         }
     }
 
     public void getMilisecondTimeOfExecution(long initialTime, long endTime)  {
-        milisecondTimeOfExecution += (double) (endTime - initialTime) / 1_000_000_000.0;
+        this.milisecondTimeOfExecution += (double) ((endTime - initialTime) / 1_000_000.0);
     }
 }

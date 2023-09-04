@@ -2,6 +2,7 @@ package Interfaces.SwingInterface;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.DecimalFormat;
 
 class Graphic<T> extends JPanel {
     private T[] array;
@@ -10,7 +11,8 @@ class Graphic<T> extends JPanel {
         this.array = array;
         setBackground(Color.WHITE);
 
-        JLabel label = new JLabel("STEP: " + step + " | " + Math.round(miliSeconds) + " Seconds");
+        DecimalFormat df = new DecimalFormat("#.#####");
+        JLabel label = new JLabel("STEP: " + step + " | " + df.format(miliSeconds) + " Miliseconds");
 
         Font font = label.getFont();
         int tamanhoFonte = 24;
